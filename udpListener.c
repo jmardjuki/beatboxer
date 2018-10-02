@@ -91,88 +91,82 @@ static void processCommand(char* command)
 	replyBuffer[0] = 0;
 
 	if (strncmp(command, COMMAND_BEAT, strlen(COMMAND_BEAT)) == 0) {
-        int numToReturn = secondWordToInt(command);
-        if ( numToReturn == 1 ) {
-            changeMode(NONE);
-        }
-        else if ( numToReturn == 2 ) {
-            changeMode(ROCK);
-        }
-        else if (numToReturn == 3) {
-            changeMode(JANET);
-        }
-        else {
-            //Error msg
-        }
-    }
-
+		int numToReturn = secondWordToInt(command);
+		if ( numToReturn == 1 ) {
+			changeMode(NONE);
+		}
+		else if ( numToReturn == 2 ) {
+			changeMode(ROCK);
+		}
+		else if (numToReturn == 3) {
+			changeMode(JANET);
+		}
+		else {
+			//Error msg
+		}
+	}
 	else if (strncmp(command, COMMAND_VOLUME, strlen(COMMAND_VOLUME)) == 0) {
 		int numToReturn = secondWordToInt(command);
-        int currentVolume = AudioMixer_getVolume();
-        if ( numToReturn == 1) {
-            currentVolume++;
-            AudioMixer_setVolume(currentVolume);
-        }
-        else {
-            currentVolume--;
-            AudioMixer_setVolume(currentVolume);
-        }
+		int currentVolume = AudioMixer_getVolume();
+		if ( numToReturn == 1) {
+			currentVolume++;
+			AudioMixer_setVolume(currentVolume);
+		}
+		else {
+			currentVolume--;
+			AudioMixer_setVolume(currentVolume);
+		}
 	}
 
 	else if (strncmp(command, COMMAND_TEMPO, strlen(COMMAND_TEMPO)) == 0) {
 		int numToReturn = secondWordToInt(command);
-        int currentTempo = getBpm();
-        if ( numToReturn == 1) {
-            currentTempo++;
-            setBpm(currentTempo);
-        }
-        else {
-            currentTempo--;
-            setBpm(currentTempo);
-        }
+		int currentTempo = getBpm();
+		if ( numToReturn == 1) {
+			currentTempo++;
+			setBpm(currentTempo);
+		}
+		else {
+			currentTempo--;
+			setBpm(currentTempo);
+		}
 	}
-
 	else if (strncmp(command, COMMAND_DRUM, strlen(COMMAND_DRUM)) == 0) {
-        int numToReturn = secondWordToInt(command);
-        if ( numToReturn == 1) {
-            addSoundToQueue(HIHAT);
-        }
-        else if ( numToReturn == 2 ) {
-            addSoundToQueue(SNARE);
-        }
-        else if (numToReturn == 3) {
-            addSoundToQueue(BASS);
-        }
-        else {
-            //Error msg
-        }
+		int numToReturn = secondWordToInt(command);
+		if ( numToReturn == 1) {
+			addSoundToQueue(HIHAT);
+		}
+		else if ( numToReturn == 2 ) {
+			addSoundToQueue(SNARE);
+		}
+		else if (numToReturn == 3) {
+			addSoundToQueue(BASS);
+		}
+		else {
+			//Error msg
+		}
 	}
-
 	else if (strncmp(command, COMMAND_GET, strlen(COMMAND_GET)) == 0) {
-        int numToReturn = secondWordToInt(command);
-        if ( numToReturn == 1) {
-            beatMode_t daBeat = getMode();
-            if ( daBeat == NONE) {
-                sprintf(replyBuffer, "beat NONE");
-            }
-            else if ( daBeat == ROCK){
-                sprintf(replyBuffer, "beat ROCK");
-            }
-            else if (daBeat == JANET) {
-                sprintf(replyBuffer, "beat JANET");
-            }
-            
-        }
-        else if ( numToReturn == 2 ) {
-            int tempoIs = getBpm();
-            sprintf(replyBuffer, "tempo %d", tempoIs);
-
-        }
-        else if ( numToReturn == 3 ) {
-            int volumeIs = AudioMixer_getVolume();
-            sprintf(replyBuffer, "volume %d", volumeIs);
-        }
-
+		int numToReturn = secondWordToInt(command);
+		if ( numToReturn == 1) {
+			beatMode_t daBeat = getMode();
+			if ( daBeat == NONE) {
+				sprintf(replyBuffer, "beat NONE");
+			}
+			else if ( daBeat == ROCK){
+				sprintf(replyBuffer, "beat ROCK");
+			}
+			else if (daBeat == JANET) {
+				sprintf(replyBuffer, "beat JANET");
+			}
+		}
+		else if ( numToReturn == 2 ) {
+			int tempoIs = getBpm();
+			sprintf(replyBuffer, "tempo %d", tempoIs);
+		}
+		else if ( numToReturn == 3 ) {
+			int volumeIs = AudioMixer_getVolume();
+			sprintf(replyBuffer, "volume %d", volumeIs);
+		}
 	}
 }
 
@@ -181,7 +175,6 @@ static int secondWordToInt(char *string)
 	// Default to a 1 if nothing.
 	int value = 1;
 	sscanf(string, "%*s%d", &value);
+
 	return value;
 }
-
-
