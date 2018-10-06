@@ -10,7 +10,16 @@ Here are the features that was build
 - Play additional beats based on accelerometer x,y,z input, each direction would play different sound
 - User would be able to interact with the application thru the web interface, it would be able to support all the features mentioned above, except that it would be able to switch around the pre-determined beats without cycling thru everything
 
+<p align="center">
+![web_interface](https://raw.githubusercontent.com/jmardjuki/beatboxer/master/images/web_interface.png)
+Figure 1: Web Interface
+</p>
 
+<p align="center">
+![web_bg](https://raw.githubusercontent.com/jmardjuki/beatboxer/master/images/web_bg.png)
+</p><p align="center">
+Figure 2: Debug messages from the node server
+</p>
 ## Building and Running
 To build and run this application, mounting the beaglebone using NFS is very recommended. There are a lot of ways to deploy the application (such as using SCP), but this seems to be a easiest way. The following command will build all the application, and transfer all the required executable and sound files from the host.
 
