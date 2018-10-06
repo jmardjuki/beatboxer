@@ -11,12 +11,12 @@ Here are the features that was build
 - User would be able to interact with the application thru the web interface, it would be able to support all the features mentioned above, except that it would be able to switch around the pre-determined beats without cycling thru everything
 
 <p align="center">
-![web_interface](https://raw.githubusercontent.com/jmardjuki/beatboxer/master/images/web_interface.png)
+<img src="https://raw.githubusercontent.com/jmardjuki/beatboxer/master/images/web_interface.png">
 Figure 1: Web Interface
 </p>
 
 <p align="center">
-![web_bg](https://raw.githubusercontent.com/jmardjuki/beatboxer/master/images/web_bg.png)
+<img src="https://raw.githubusercontent.com/jmardjuki/beatboxer/master/images/web_bg.png">
 </p><p align="center">
 Figure 2: Debug messages from the node server
 </p>
