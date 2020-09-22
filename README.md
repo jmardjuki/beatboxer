@@ -24,18 +24,18 @@ Figure 2: Debug messages from the node server
 To build and run this application, mounting the beaglebone using NFS is very recommended. There are a lot of ways to deploy the application (such as using SCP), but this seems to be a easiest way. The following command will build all the application, and transfer all the required executable and sound files from the host.
 
 Dependency (Ubuntu/Debian based)
-GNU C compiler for arm arch (Only if we are not building on target directly)
+- GNU C compiler for arm arch (Only if we are not building on target directly)
 https://packages.debian.org/stretch/gcc-arm-linux-gnueabi
 ```
 $ sudo apt install gcc-arm-linux-gnueabi
 ```
-ALSA library for development
+- ALSA library for development
 https://packages.debian.org/sid/libasound2-dev
 ```
 $ sudo apt-get install libasound2-dev
 ```
 
-ARM ALSA library
+- ARM ALSA library
 ```
 # get armel lib on target:
 #   # apt-get install libasound2:armel
@@ -44,6 +44,7 @@ ARM ALSA library
 # Copy to just base library
 ```
 
+To build the project:
 ```
 $ make    #on top directory
 ```
