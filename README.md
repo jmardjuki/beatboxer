@@ -20,6 +20,12 @@ Figure 1: Web Interface
 </p><p align="center">
 Figure 2: Debug messages from the node server
 </p>
+
+## Hardware setup
+As the BeagleBone has no wifi chip, you would have to attach eth cable to the eth port. It is possible to set static IP on your BeagleBone, but that would not be covered in this README.
+For this application, the BeagleBone IP was set to static to 192.168.2.2. I used bridge virtual network on my Mac to allow my BeagleBone to talk to the outside world.
+If you're using other IP Address, please change the IP in the udp_server.js.
+
 ## Building and Running
 To build and run this application, mounting the beaglebone using NFS is very recommended. There are a lot of ways to deploy the application (such as using SCP), but this seems to be a easiest way. The following command will build all the application, and transfer all the required executable and sound files from the host.
 
