@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"description": "Demo relaying UDP messages from Node.js to a C app.",
 	"dependencies": {
-		"socket.io": "~0.9.6",
+		"socket.io": "~2.4.0",
 		"mime": "~1.2.7"
 	}
 }
