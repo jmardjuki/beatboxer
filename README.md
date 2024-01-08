@@ -10,6 +10,7 @@ Here are the features that was build
 - Play additional beats based on accelerometer x,y,z input, each direction would play different sound
 - User would be able to interact with the application thru the web interface, it would be able to support all the features mentioned above, except that it would be able to switch around the pre-determined beats without cycling thru everything
 
+<!--
 <p align="center">
 <img src="https://raw.githubusercontent.com/jmardjuki/beatboxer/master/images/web_interface.png">
 Figure 1: Web Interface
@@ -20,6 +21,7 @@ Figure 1: Web Interface
 </p><p align="center">
 Figure 2: Debug messages from the node server
 </p>
+-->
 
 ## Hardware setup
 As the BeagleBone has no wifi chip, you would have to attach eth cable to the eth port. It is possible to set static IP on your BeagleBone, but that would not be covered in this README.
